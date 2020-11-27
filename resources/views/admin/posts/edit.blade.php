@@ -31,7 +31,7 @@
 <div class="row">
     <div class="col-lg-12">
         <form role="form">
-            <form action="{{route('admin.posts.update',$post-id)}}" method="POST" role="form">
+            <form action="{{route('admin.posts.update',$post->id)}}" method="POST" role="form">
 
                 @csrf
                 @method('PATCH')
