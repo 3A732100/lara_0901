@@ -27,7 +27,7 @@
                 <td>{{$post->title}}</td>
                 <td style="text-align:center">{{($post->is_feature)?'v':'x'}}</td>
                 <td>
-                    <a href="{{route('admin.posts.edit',$post->id)}}">編輯</a>
+                    <a class="btn btn-sm btn-primary" href="{{ route('admin.posts.edit', $post->id) }}">編輯</a>
             /
                     <a hred="#">刪除</a>
                 </td>
