@@ -29,5 +29,6 @@ Route::prefix('admin')->group(function () {
     Route::get('posts/{id}/edit', [AdminPostsController::class, 'edit'])->name('admin.posts.edit');
     //新增文章之路由
     Route::post('posts',[AdminPostsController::class,'store'])->name('admin.posts.store');
-
+    //更新
+    Route::patch('posts/{id}',[AdminPostsController::class,'update'])->name('admin.posts.update');
 });
