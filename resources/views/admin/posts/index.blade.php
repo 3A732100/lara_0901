@@ -40,8 +40,13 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="table-responsive">
-            <table class="table table-bordered table-hover">
-                <thead>
+            //<table class="table table-bordered table-hover">
+                //<thead>
+                <form action="{{ route('admin.posts.destroy', $post->id)}}" method="POST" style="display:inline">
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn btn-sm btn-danger" type="submit">刪除</button>
+                </form>
                     <tr>
                         <th width="30" style="text-align: center">#</th>
                         <th>標題</th>
