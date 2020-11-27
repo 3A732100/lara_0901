@@ -21,6 +21,18 @@
 <div class="row" style="margin-bottom: 20px; text-align: right">
     <div class="col-lg-12">
         <a href="{{ route('admin.posts.create') }}" class="btn btn-success">建立新文章</a>
+        @foreach($posts as $post)
+            <tr>
+                <td style="text-align:center">{{$post->id}}</td>
+                <td>{{$post->title}}</td>
+                <td style="text-align:center">{{($post->is_feature)?'v':'x'}}</td>
+                <td>
+                    <a href="{{route('admin.posts.edit',$post->id)}}">編輯</a>
+            /
+                    <a hred="#">刪除</a>
+                </td>
+            </tr>>
+        @endforeach
     </div>
 </div>
 <!-- /.row -->
