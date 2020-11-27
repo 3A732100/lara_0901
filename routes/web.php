@@ -31,4 +31,6 @@ Route::prefix('admin')->group(function () {
     Route::post('posts',[AdminPostsController::class,'store'])->name('admin.posts.store');
     //更新
     Route::patch('posts/{id}',[AdminPostsController::class,'update'])->name('admin.posts.update');
+    //刪除的路由設定
+    Route::delete('posts/{id}',[AdminPostsController::class,'destroy'])->name('admin.posts.destroy');
 });
